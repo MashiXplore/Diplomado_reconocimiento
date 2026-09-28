@@ -45,7 +45,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 <script>
   // 👇 PEGA AQUÍ LA URL DE TU MODELO (debe terminar en /)
-  const MODEL_URL = "https://teachablemachine.withgoogle.com/models/XXXXXXXXX/";
+  const MODEL_URL = "https://teachablemachine.withgoogle.com/models/PymyFpzMt/";
 
   let model, webcam, maxPredictions, running = false;
   const media = document.getElementById("media");
@@ -64,7 +64,7 @@
       }
       statusEl.textContent = "Modelo listo ✅ Usa la cámara o sube una imagen.";
     } catch (e) {
-      statusEl.textContent = "❌ No se pudo cargar el modelo. Revisa MODEL_URL.";
+      statusEl.textContent = "❌ No se pudo cargar el modelo. Revisa MODEL_URL. Detalle: " + (e && e.message ? e.message : e);
       console.error(e);
     }
   }
